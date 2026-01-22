@@ -8,6 +8,11 @@ import { Service } from "./components/frontend/Service";
 import { Project } from "./components/frontend/Project";
 import { Blog } from "./components/frontend/Blog";
 import { ContactUs } from "./components/frontend/ContactUs";
+import { Login } from "./components/backend/Login";
+import { ToastContainer ,toast  } from 'react-toastify';
+import { Dashboard } from "./components/backend/Dashboard";
+import { RequireAuth } from "./components/common/RequireAuth";
+
 
 function App() {
 
@@ -22,8 +27,15 @@ function App() {
                <Route path='/project' element={<Project/>} />
                <Route path='/blog' element={<Blog/>} />
                <Route path="/contactUs" element={<ContactUs/>}  />
+               <Route path="/admin/login" element={<Login/>} />
+                 <Route path="/admin/dashboard" element={
+                  <RequireAuth>
+                    <Dashboard/>
+                  </RequireAuth>
+                 } />
           </Routes>
        </BrowserRouter>
+       <ToastContainer position="top-center" />
     </>
   );
 }

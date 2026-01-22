@@ -299,3 +299,42 @@ padding: 15px 10px;
           }
     }
 }
+
+.section-9{
+    .card{
+        border-radius: 40px;
+        
+    }
+    .card-body{
+       border-radius: 40px; 
+    }
+}
+.section-10{
+    .card{
+        border-radius: 40px;
+        
+    }
+}
+.login-form{
+    
+     border-radius: 60px;
+    
+}
+
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
+
+.sidebard{
+    ul{
+        li{
+            a{
+                display: block;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 10px 0px;
+            }
+        }
+    }
+}
