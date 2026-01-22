@@ -64,7 +64,7 @@ export const Home = () => {
                         <div className="col-md-3 colo-lg-3">
                            <div className="item">
                             <div className="service-image">
-                             <img src={ServiceImag} alt="" className="w-100" />
+                             <img src={ConstructionImg} alt="" className="w-100" />
                             </div>
                             <div className="service-body">
                               <div className="service-tilte">
@@ -81,7 +81,7 @@ export const Home = () => {
                           <div className="col-md-3 colo-lg-3">
                            <div className="item">
                             <div className="service-image">
-                             <img src={ServiceImag} alt="" className="w-100" />
+                             <img src={ConstructionImg} alt="" className="w-100" />
                             </div>
                             <div className="service-body">
                               <div className="service-tilte">
@@ -98,7 +98,7 @@ export const Home = () => {
                           <div className="col-md-3 colo-lg-3">
                            <div className="item">
                             <div className="service-image">
-                             <img src={ServiceImag} alt="" className="w-100" />
+                             <img src={ConstructionImg} alt="" className="w-100" />
                             </div>
                             <div className="service-body">
                               <div className="service-tilte">
@@ -115,7 +115,7 @@ export const Home = () => {
                           <div className="col-md-3 colo-lg-3">
                            <div className="item">
                             <div className="service-image">
-                             <img src={ServiceImag} alt="" className="w-100" />
+                             <img src={ConstructionImg} alt="" className="w-100" />
                             </div>
                             <div className="service-body">
                               <div className="service-tilte">

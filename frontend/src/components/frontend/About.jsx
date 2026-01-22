@@ -3,33 +3,23 @@ import { Header } from '../common/Header'
 import { Footer } from '../common/Footer'
 import {About  as AboutNew  } from "../common/About";
 import TeamImag from "../../assets/images/team.jpg";
+import { Hero } from '../common/Hero';
 
 export const About = () => {
   return (
     <>
     <Header/>
     <main>
-        {/* hero section */}
-        <section className="section-7">
-          <div className="hero d-flex align-items-center">
-            <div className="container">
-              <div className="text-left">
-                <span>Qulity Amazing Vlaue</span>
-                <h1>About Us</h1>
-                <p>
-                  Neque porro quisquam est qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* hero section  close*/}
+          <Hero preHeading='Quality. Integrity. value'
+              heading='About Us'
+              text='Neque porro quisquam est qui dolorem ipsum quia dolor sit
+<br/>                        amet, consectetur, adipisci velit.'
+          />
          <AboutNew/>
          <section className='section-8 bg-light py-5'>
           <div className='container'>
           <div  className="section-header text-center">
-                        <span>Our Teams</span>
+                        <span>Teams</span>
                         <h2>Our Teams</h2>
                         <p>On the other hand, we denounce with righteous indignation and dislike men <br/>who are so beguiled and 
                           demoralized by the charms.</p>
