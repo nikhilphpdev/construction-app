@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./context/Auth";
 
 export const Login = () => {
-const { login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const {
@@ -17,7 +17,7 @@ const { login } = useContext(AuthContext);
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-  
+
     try {
       const res = await fetch("http://127.0.0.1:8000/api/authenticate", {
         method: "POST",
@@ -27,8 +27,7 @@ const { login } = useContext(AuthContext);
         },
         body: JSON.stringify(data),
       });
-      const result = await res.json();
-      console.log(result);
+      const result = await res.json();    
       if (result.status == 422) {
         toast.error(result.message);
       } else if (result.status == 401) {
@@ -78,9 +77,8 @@ const { login } = useContext(AuthContext);
                             })}
                             type="text"
                             placeholder="Email"
-                            className={`form-control ${
-                              errors.email ? "is-invalid" : ""
-                            }`}
+                            className={`form-control ${errors.email ? "is-invalid" : ""
+                              }`}
                           />
                           {errors.email && (
                             <p className="invalid-feedback">
@@ -98,9 +96,8 @@ const { login } = useContext(AuthContext);
                             })}
                             type="password"
                             placeholder="Password"
-                            className={`form-control ${
-                              errors.password ? "is-invalid" : ""
-                            }`}
+                            className={`form-control ${errors.password ? "is-invalid" : ""
+                              }`}
                           />
                           {errors.password && (
                             <p className="invalid-feedback">
