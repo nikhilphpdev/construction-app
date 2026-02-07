@@ -17,7 +17,6 @@ export const Login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-
     try {
       const res = await fetch("http://127.0.0.1:8000/api/authenticate", {
         method: "POST",
@@ -27,7 +26,7 @@ export const Login = () => {
         },
         body: JSON.stringify(data),
       });
-      const result = await res.json();    
+      const result = await res.json();
       if (result.status == 422) {
         toast.error(result.message);
       } else if (result.status == 401) {
@@ -77,8 +76,9 @@ export const Login = () => {
                             })}
                             type="text"
                             placeholder="Email"
-                            className={`form-control ${errors.email ? "is-invalid" : ""
-                              }`}
+                            className={`form-control ${
+                              errors.email ? "is-invalid" : ""
+                            }`}
                           />
                           {errors.email && (
                             <p className="invalid-feedback">
@@ -96,8 +96,9 @@ export const Login = () => {
                             })}
                             type="password"
                             placeholder="Password"
-                            className={`form-control ${errors.password ? "is-invalid" : ""
-                              }`}
+                            className={`form-control ${
+                              errors.password ? "is-invalid" : ""
+                            }`}
                           />
                           {errors.password && (
                             <p className="invalid-feedback">
