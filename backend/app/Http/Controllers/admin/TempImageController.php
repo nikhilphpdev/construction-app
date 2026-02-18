@@ -32,12 +32,12 @@ class TempImageController extends Controller
             ->coverDown(300, 300)
             ->save(public_path('uploads/temp/thumb/' . $imageName));
 
-        TempImage::create([
+       $tempImage =  TempImage::create([
             'image' => $imageName
         ]);
         return response()->json([
             'status' => true,
-            'data' => $imageName,
+            'data' => $tempImage,
             'message' => 'Image  Uploaded Successfully'
         ]);
     }

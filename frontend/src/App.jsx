@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Dashboard } from "./components/backend/Dashboard";
 import { Show as ShowServices } from "./components/backend/services/Show";
 import { Create as CreateService } from "./components/backend/services/Create";
+import { Edit as EditService } from "./components/backend/services/Edit";
 import { RequireAuth } from "./components/common/RequireAuth";
 
 function App() {
@@ -48,6 +49,14 @@ function App() {
             element={
               <RequireAuth>
                 <CreateService />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/admin/services/edit/:id"
+            element={
+              <RequireAuth>
+                <EditService />
               </RequireAuth>
             }
           />

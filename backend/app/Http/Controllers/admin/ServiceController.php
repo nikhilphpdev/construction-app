@@ -146,13 +146,10 @@ class ServiceController extends Controller
         }
 
         // slug generate
-        $request->merge([
-            'slug' => Str::slug($request->slug)
-        ]);
+
 
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
-            'slug' => 'required|unique:services,slug,' . $id
+            'title' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -177,7 +174,7 @@ class ServiceController extends Controller
         =====================
         */
 
-        if ($request->imageId > 0) {
+        if (!empty($request->imageId)) {
             $oldImage = $service->image;
             $tempImage = TempImage::find($request->imageId);
 
@@ -226,7 +223,7 @@ class ServiceController extends Controller
 
         return response()->json([
             'status' => true,
-            'data' => $tempImage,
+            'data' => $service,
             'message' => 'Service updated successfully'
         ]);
     }

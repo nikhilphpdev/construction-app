@@ -30,4 +30,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
      Route::delete('services/{id}',[ServiceController::class,'destroy']);
 
      Route::post('temp-images',[TempImageController::class,'store']);
-});
+}); 
